@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        index.html
+        Main HTML file for the "Entertainment Hub" project.
+
+        This file defines:
+        - Header and navigation bar
+        - Movies section
+        - Books section
+        - Music section
+        - Mood-based recommendations (song + movies + books)
+    -->
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title displayed on the browser tab -->
+    <title>Entertainment Hub</title>
+
+    <!-- Linking external stylesheet for layout and design -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Linking external JavaScript file for interactivity and recommendations -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- ======================= HEADER + NAVIGATION ======================= -->
+    <header class="site-header">
+        <h1>Entertainment Hub</h1>
+        <p class="tagline">
+            Explore movies, music, and books — all in one interactive website.
+        </p>
+
+        <!-- Navigation bar with internal links to page sections -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#mood-recommendations">Mood-Based Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ============================ MAIN CONTENT ========================= -->
+    <main>
+        <!-- ============================= MOVIES ========================== -->
+        <section id="movies" class="content-section">
+            <h2>Movies</h2>
+            <p class="section-intro">
+                A list of movies with cast information, brief overview, and release year.
+            </p>
+
+            <div id="movies-list" class="card-grid">
+                <!-- Example movie card 1 -->
+                <article class="card movie-card">
+                    <h3>Inception</h3>
+                    <p><strong>Cast:</strong> Leonardo DiCaprio</p>
+                    <p><strong>Year:</strong> 2010</p>
+                    <p class="overview">
+                        A science-fiction thriller about entering dreams to extract secrets.
+                    </p>
+                </article>
+
+                <!-- Example movie card 2 -->
+                <article class="card movie-card">
+                    <h3>Interstellar</h3>
+                    <p><strong>Cast:</strong> Matthew McConaughey</p>
+                    <p><strong>Year:</strong> 2014</p>
+                    <p class="overview">
+                        A space exploration journey to find a new habitable planet.
+                    </p>
+                </article>
+
+                <!-- Additional movie cards can be added here or injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- ============================== BOOKS ========================== -->
+        <section id="books" class="content-section">
+            <h2>Books</h2>
+            <p class="section-intro">
+                Explore books with author details, publication year, and short summaries.
+            </p>
+
+            <div id="books-list" class="card-grid">
+                <!-- Example book card 1 -->
+                <article class="card book-card">
+                    <h3>The Hobbit</h3>
+                    <p><strong>Author:</strong> J. R. R. Tolkien</p>
+                    <p><strong>Year:</strong> 1937</p>
+                    <p class="overview">
+                        A fantasy adventure following Bilbo Baggins on a quest to reclaim a lost kingdom.
+                    </p>
+                </article>
+
+                <!-- Example book card 2 -->
+                <article class="card book-card">
+                    <h3>1984</h3>
+                    <p><strong>Author:</strong> George Orwell</p>
+                    <p><strong>Year:</strong> 1949</p>
+                    <p class="overview">
+                        A dystopian novel about surveillance, control, and loss of individual freedom.
+                    </p>
+                </article>
+
+                <!-- More books can be added here or generated via JavaScript -->
+            </div>
+        </section>
+
+        <!-- ============================== MUSIC ========================== -->
+        <section id="music" class="content-section">
+            <h2>Music</h2>
+            <p class="section-intro">
+                Discover songs with artist names, release year, and short descriptions.
+            </p>
+
+            <div id="music-list" class="card-grid">
+                <!-- Example song card 1 -->
+                <article class="card music-card">
+                    <h3>Blinding Lights</h3>
+                    <p><strong>Artist:</strong> The Weeknd</p>
+                    <p><strong>Year:</strong> 2019</p>
+                    <p class="overview">
+                        A synth-pop track with an energetic, nostalgic night-drive feeling.
+                    </p>
+                </article>
+
+                <!-- Example song card 2 -->
+                <article class="card music-card">
+                    <h3>Someone Like You</h3>
+                    <p><strong>Artist:</strong> Adele</p>
+                    <p><strong>Year:</strong> 2011</p>
+                    <p class="overview">
+                        An emotional ballad about love, loss, and moving on.
+                    </p>
+                </article>
+
+                <!-- Additional song cards can be added or handled through JavaScript -->
+            </div>
+        </section>
+
+        <!-- ===================== MOOD-BASED RECOMMENDATIONS ============== -->
+        <section id="mood-recommendations" class="content-section">
+            <h2>Mood-Based Recommendations</h2>
+            <p class="section-intro">
+                Select your current mood to get a song, movies or series, and books 
+                that match how you are feeling.
+            </p>
+
+            <!-- Simple form used by JavaScript to generate recommendations -->
+            <form id="mood-form" class="mood-form">
+                <div class="form-group">
+                    <label for="moodSelect">Choose your mood:</label>
+                    <select id="moodSelect" name="mood">
+                        <option value="" selected disabled>Select mood</option>
+                        <option value="happy">Happy</option>
+                        <option value="sad">Sad</option>
+                        <option value="relaxed">Relaxed</option>
+                        <option value="energetic">Energetic</option>
+                        <option value="romantic">Romantic</option>
+                        <option value="focus">Study / Focus</option>
+                    </select>
+                </div>
+
+                <!-- Button that JavaScript listens to for generating a recommendation -->
+                <button type="button" id="recommendBtn">
+                    Get Recommendations
+                </button>
+            </form>
+
+            <!-- Area where JavaScript will display the recommended content -->
+            <div id="recommendationResult" class="recommendation-result">
+                <!-- JavaScript will insert recommendations here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================= FOOTER ============================= -->
+    <footer class="site-footer">
+        <p>
+            Entertainment Hub — Web Development Course Project, FAST NUCES.
+        </p>
+    </footer>
+</body>
+</html>
+   
