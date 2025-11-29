@@ -71,6 +71,7 @@ function handleRecommendationClick() {
         recommendationResult.textContent = "Please select a mood first.";
         return;
     }
+//small js pdate for commit 5
 
     // Look up the data for the selected mood.
     const data = moodRecommendations[selectedMood];
