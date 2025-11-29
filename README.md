@@ -11,7 +11,7 @@ This project is built using **HTML5**, **CSS3**, and **JavaScript (ES6+)**.
 
 Paste your link after deployment:
 
-https://clueless-blud.github.io/entertainment-hub/
+https://khadija646.github.io/entertainment-hub/
 
 ---
 
